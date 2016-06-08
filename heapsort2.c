@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "heapsort2.h"
 
-//Bug Ô¤·À
+//Bug é¢„é˜²
 void Error (int **a, int N) {
     if (N > 0)
         *a = (int *)malloc(sizeof(int) * N);
@@ -12,7 +12,7 @@ void Error (int **a, int N) {
     }
 }
 
-//½»»»Êý×éÔªËØµØÖ·
+//äº¤æ¢æ•°ç»„å…ƒç´ åœ°å€
 void exch(int *p, int *q) {
     int tmp;
     tmp = *p;
@@ -20,7 +20,7 @@ void exch(int *p, int *q) {
     *q = tmp;
 }
 
-//´òÓ¡Êý×é
+//æ‰“å°æ•°ç»„
 void PrintArr(int a[], int n, int flag) {
     int i;
     if (flag) puts("\nFix finish:");
@@ -29,7 +29,7 @@ void PrintArr(int a[], int n, int flag) {
     putchar('\n');
 }
 
-//×îÐ¡¶ÑÅÅÐòÐÞ¸´
+//æœ€å°å †æŽ’åºä¿®å¤
 void FixDown_min(int a[], int n, int k) {
     int i, j, tmp;
     i = k;
@@ -48,7 +48,7 @@ void FixDown_min(int a[], int n, int k) {
     PrintArr(a, n, 1);
 }
 
-//×îÐ¡¶ÑÄÚ²¿½áµãÅÅÐò
+//æœ€å°å †å†…éƒ¨ç»“ç‚¹æŽ’åº
 void Heapify(int a[], int n) {
     int i;
     puts("******************************");
@@ -57,7 +57,7 @@ void Heapify(int a[], int n) {
         FixDown_min(a, n, i);
 }
 
-//×îÐ¡¶ÑÅÅÐò
+//æœ€å°å †æŽ’åº
 void HeapSort(int a[], int n) {
     int i;
     Heapify(a, n);
